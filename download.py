@@ -191,6 +191,7 @@ def parse_ml_1m():
             f.write(",".join([str(u) for u in users]) + "\n")
 
     descriptions = [""] * len(ratings)
+    cache = dbm.open(os.path.join(dataset_dir, "cache"), "c")
     with open(os.path.join(dataset_dir, "ml-1m/movies.dat"), "r", encoding="unicode_escape") as f:
         lines = f.readlines()
         for line in lines:
@@ -198,10 +199,12 @@ def parse_ml_1m():
             if fields[0] not in item_dict:
                 continue
             item_id = item_dict.id(fields[0])
-            descriptions[item_id] = get_description(fields[1])
+            if fields[1] not in cache:
+                cache[fields[1]] = get_description(fields[1])
+            descriptions[item_id] = cache[fields[1]]
     with open(os.path.join(dataset_dir, "descriptions.txt"), "w") as f:
         for description in descriptions:
-            f.write(description + "\n")
+            f.write(" ".join(description.decode('utf-8').split()) + "\n")
 
 
 def get_description(title: str) -> str:
