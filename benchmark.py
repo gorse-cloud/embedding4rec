@@ -52,6 +52,10 @@ def get_embeddings(descriptions: List[str], model: str, dimensions: Optional[int
         cache_file = os.path.join(cache_dir, f"{model}.npy")
     else:
         cache_file = os.path.join(cache_dir, f"{model}-{dimensions}.npy")
+    # Create directory if it doesn't exist.
+    cache_file_dir = os.path.dirname(cache_file)
+    if not os.path.exists(cache_file_dir):
+        os.makedirs(cache_file_dir)
     if os.path.exists(cache_file):
         return np.load(cache_file)
     embeddings = []
@@ -69,7 +73,7 @@ def get_embeddings(descriptions: List[str], model: str, dimensions: Optional[int
 
 @click.command()
 @click.argument("dataset", type=click.Choice(["ml-1m"]))
-@click.option("--model", type=str, default="text-embedding-v4", help="OpenAI model to use for embeddings")
+@click.argument("model")
 @click.option("--dimensions", type=int, default=None, help="Number of dimensions for embeddings")
 def main(dataset: str, model: str, dimensions: Optional[int] = None):
     # Load dataset
@@ -86,7 +90,7 @@ def main(dataset: str, model: str, dimensions: Optional[int] = None):
         by_embeddings = find_neighbors_by_embeddings(embeddings, item_id)
         recall += len(by_ratings & by_embeddings) / len(by_ratings)
     recall = recall / len(descriptions)
-    print(f"model: {model}, dimensions: {dimensions}, recall: {recall}")
+    print(f"model: {model}, dimensions: {embeddings.shape[1]}, recall: {recall}")
 
 
 if __name__ == "__main__":
