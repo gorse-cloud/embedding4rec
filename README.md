@@ -1,20 +1,25 @@
 
 
-|                        | Embedding size | ml-1m    |
-|------------------------|----------------|----------|
-| bge-m3                 | 1024           | 0.069382 |
-| mxbai-embed-large      | 1024           | 0.092035 |
-| nomic-embed-text       | 768            | 0.083899 |
-| text-embedding-v4      | 2048           | 0.102493 |
-| text-embedding-v4      | 1024           | 0.097657 |
-| text-embedding-v4      | 768            | 0.096195 |
-| text-embedding-v4      | 512            | 0.091892 |
-| text-embedding-v4      | 256            | 0.086651 |
-| text-embedding-v4      | 128            | 0.084257 |
-| text-embedding-v4      | 64             | 0.070103 |
-| text-embedding-3-large | 3072           | 0.082458 |
-| text-embedding-3-large | 1024           | 0.083165 |
-| text-embedding-3-large | 768            | 0.082344 |
+|                        | Embedding size | ml-1m   |
+|------------------------|----------------|---------|
+| bge-m3                 | 1024           | 0.11492 |
+| mxbai-embed-large      | 1024           | 0.16595 |
+| nomic-embed-text       | 768            | 0.15161 |
+| text-embedding-v4      | 2048           | 0.17262 |
+| text-embedding-v4      | 1024           | 0.16946 |
+| text-embedding-v4      | 768            | 0.16674 |
+| text-embedding-v4      | 512            | 0.16278 |
+| text-embedding-v4      | 256            | 0.15280 |
+| text-embedding-v4      | 128            | 0.13873 |
+| text-embedding-v4      | 64             | 0.11969 |
+| text-embedding-3-large | 3072           | 0.17395 |
+| text-embedding-3-large | 2048           | 0.17241 |
+| text-embedding-3-large | 1024           | 0.17026 |
+| text-embedding-3-large | 768            | 0.16610 |
+| text-embedding-3-large | 512            | 0.16362 |
+| text-embedding-3-large | 256            | 0.15086 |
+| text-embedding-3-large | 128            | 0.13769 |
+| text-embedding-3-large | 64             | 0.11272 |
 
 629. "Rear Window" (1954), directed by Alfred Hitchcock, is a suspenseful thriller that centers on L.B. Jeffries, a wheelchair-bound photojournalist played by James Stewart, who becomes increasingly convinced that his neighbor has committed murder. Confined to his small apartment due to a broken leg, Jeffries spends his days observing the lives of his neighbors through his rear window, developing a dangerous obsession with their private affairs. As he gathers evidence with the help of his girlfriend Lisa, portrayed by Grace Kelly, the tension escalates, leading to a gripping climax that explores themes of voyeurism, morality, and the boundaries of privacy. Hitchcock masterfully builds suspense through tight cinematography and clever storytelling, making "Rear Window" a classic in the thriller genre.
 1561. "Spellbound" (1945), directed by Alfred Hitchcock, is a psychological thriller that explores the complexities of the human mind and the nature of dreams. The film centers on Dr. Constance Petersen, a psychoanalyst played by Ingrid Bergman, who becomes intrigued by a handsome amnesiac named John Ballantine, portrayed by Gregory Peck, when he arrives at a mental institution claiming to be the new director. As Constance delves into John's subconscious to unravel the mystery of his identity and the murder of the previous director, she confronts her own feelings and psychological barriers. With its striking dream sequences designed by Salvador Dalí and themes of love, obsession, and the mind's intricacies, "Spellbound" captivates audiences with its blend of suspense and psychological depth.

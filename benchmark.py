@@ -32,7 +32,7 @@ def find_neighbors_by_ratings(
     for i, item_ratings in enumerate(ratings):
         if i == item_id:
             continue
-        s = len(item_ratings & ratings[item_id])
+        s = len(item_ratings & ratings[item_id]) / len(item_ratings | ratings[item_id])
         heapq.heappush(h, (s, i))
         if len(h) > k:
             heapq.heappop(h)
